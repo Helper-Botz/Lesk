@@ -225,7 +225,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"{random.choice(RUN_STRINGS)}[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -233,27 +233,31 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton(f'🎊𝐅𝐢𝐥𝐞𝐬 𝐈𝐧𝐟𝐨', 'select'),
+                InlineKeyboardButton(f"𝐌𝐨𝐯𝐢𝐞 𝐈𝐧𝐟𝐨🎊", 'update')
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton(f"🎭𝐒𝐞𝐧𝐝 𝐀𝐥𝐥🎭", callback_data=f"sendfiles#{key}")
+        ])
+        btn.insert(0, [
+            InlineKeyboardButton(f"🎨𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞𝐬", callback_data=f"languages#{key}"),
+            InlineKeyboardButton(f"𝐒𝐞𝐚𝐬𝐨𝐧𝐬🎨",  callback_data=f"seasons#{key}")
         ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton(f'🎊𝐅𝐢𝐥𝐞𝐬 𝐈𝐧𝐟𝐨', 'select'),
+                InlineKeyboardButton(f"𝐌𝐨𝐯𝐢𝐞 𝐈𝐧𝐟𝐨🎊", 'update')
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton(f"🎭𝐒𝐞𝐧𝐝 𝐀𝐥𝐥🎭", callback_data=f"sendfiles#{key}")
+        ])
+        btn.insert(0, [
+            InlineKeyboardButton(f"🎨𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞𝐬", callback_data=f"languages#{key}"),
+            InlineKeyboardButton(f"𝐒𝐞𝐚𝐬𝐨𝐧𝐬🎨",  callback_data=f"seasons#{key}")
         ])
     try:
         if settings['max_btn']:

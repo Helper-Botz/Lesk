@@ -35,18 +35,18 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton(f'𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [                    
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐇𝐞𝐥𝐩{random.choice(RUN_STRINGS)}', callback_data='help'),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='helps')
+            InlineKeyboardButton(f'𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton(f'𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='helps')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐑𝐮𝐥𝐞𝐬{random.choice(RUN_STRINGS)}', url='http://telegra.ph/Minnal-murali-03-06-12'),        
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐛𝐨𝐮𝐭{random.choice(RUN_STRINGS)}', callback_data='about')          
+            InlineKeyboardButton(f'𝐑𝐮𝐥𝐞𝐬', url='http://telegra.ph/Minnal-murali-03-06-12'),        
+            InlineKeyboardButton(f'𝐀𝐛𝐨𝐮𝐭', callback_data='about')          
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=SUPPORT_CHAT_LINK)
+            InlineKeyboardButton(f'𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url=SUPPORT_CHAT_LINK)
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐈𝐧𝐥𝐢𝐧𝐞{random.choice(RUN_STRINGS)}', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬{random.choice(RUN_STRINGS)}', callback_data=f"setting")
+            InlineKeyboardButton(f'𝐈𝐧𝐥𝐢𝐧𝐞', switch_inline_query_current_chat=''),
+            InlineKeyboardButton(f'𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬', callback_data=f"setting")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -61,18 +61,18 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton(f'𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [                    
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐇𝐞𝐥𝐩{random.choice(RUN_STRINGS)}', callback_data='help'),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='helps')
+            InlineKeyboardButton(f'𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton(f'𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='helps')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐑𝐮𝐥𝐞𝐬{random.choice(RUN_STRINGS)}', url='http://telegra.ph/Minnal-murali-03-06-12'),        
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐛𝐨𝐮𝐭{random.choice(RUN_STRINGS)}', callback_data='about')          
+            InlineKeyboardButton(f'𝐑𝐮𝐥𝐞𝐬', url='http://telegra.ph/Minnal-murali-03-06-12'),        
+            InlineKeyboardButton(f'𝐀𝐛𝐨𝐮𝐭', callback_data='about')          
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=SUPPORT_CHAT_LINK)
+            InlineKeyboardButton(f'𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url=SUPPORT_CHAT_LINK)
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐈𝐧𝐥𝐢𝐧𝐞{random.choice(RUN_STRINGS)}', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬{random.choice(RUN_STRINGS)}', callback_data=f"setting")
+            InlineKeyboardButton(f'𝐈𝐧𝐥𝐢𝐧𝐞', switch_inline_query_current_chat=''),
+            InlineKeyboardButton(f'𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬', callback_data=f"setting")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
@@ -115,18 +115,18 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton(f'𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [                    
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐇𝐞𝐥𝐩{random.choice(RUN_STRINGS)}', callback_data='help'),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='helps')
+            InlineKeyboardButton(f'𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton(f'𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='helps')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐑𝐮𝐥𝐞𝐬{random.choice(RUN_STRINGS)}', url='http://telegra.ph/Minnal-murali-03-06-12'),        
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐛𝐨𝐮𝐭{random.choice(RUN_STRINGS)}', callback_data='about')          
+            InlineKeyboardButton(f'𝐑𝐮𝐥𝐞𝐬', url='http://telegra.ph/Minnal-murali-03-06-12'),        
+            InlineKeyboardButton(f'𝐀𝐛𝐨𝐮𝐭', callback_data='about')          
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=SUPPORT_CHAT_LINK)
+            InlineKeyboardButton(f'𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url=SUPPORT_CHAT_LINK)
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐈𝐧𝐥𝐢𝐧𝐞{random.choice(RUN_STRINGS)}', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬{random.choice(RUN_STRINGS)}', callback_data=f"setting")
+            InlineKeyboardButton(f'𝐈𝐧𝐥𝐢𝐧𝐞', switch_inline_query_current_chat=''),
+            InlineKeyboardButton(f'𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬', callback_data=f"setting")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_text(

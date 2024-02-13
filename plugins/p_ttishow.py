@@ -11,6 +11,7 @@ import asyncio
 
 """-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
 
+
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
     r_j_check = [u.id for u in message.new_chat_members]
@@ -78,25 +79,27 @@ async def save_group(bot, message):
                                                  ),
 #                                                 parse_mode=enums.ParseMode.MARKDOWN
                 )
-                await asyncio.sleep(10)
-                await temp.MELCOW['welcome'].delete()
+                await message.delete()
+#                await asyncio.sleep(90)
+#                await temp.MELCOW['welcome'].delete()
     
             buttons = [[
-                InlineKeyboardButton('Support', url=(temp.MELCOW['welcome']).link)
+                InlineKeyboardButton('JOINED', url=(temp.MELCOW['welcome']).link)
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             s = await bot.send_video(
             chat_id=ADMIN,
             video=(MELCOW_VID),
-            caption="𝐇𝐞𝐥𝐥𝐨: [{u.mention}](tg://user?id={message.from_user.id}) {u.mention} \n 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 {message.chat.title} \n𝐘𝐨𝐮𝐫 𝐈𝐝: {message.from_user.id} \n𝐘𝐨𝐮𝐫 𝐀𝐝𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐍𝐨: {count}",
+            caption=f"𝐇𝐞𝐥𝐥𝐨: {message.from_user.mention} \n 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 {message.chat.title} \n𝐘𝐨𝐮𝐫 𝐈𝐝: {message.from_user.id} \n𝐘𝐨𝐮𝐫 𝐀𝐝𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐍𝐨: {count}",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.MARKDOWN
             )
 #          
 #        await message.delete()       
 #        if settings["auto_delete"]:
-            await asyncio.sleep(660)
-            await s.delete()
+            await asyncio.sleep(90)
+            await temp.MELCOW['welcome'].delete()
+#            await s.delete()
              
                 
 @Client.on_message(filters.left_chat_member)

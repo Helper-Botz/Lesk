@@ -88,7 +88,7 @@ async def save_group(bot, message):
             s = await bot.send_video(
             chat_id=ADMIN,
             video=(MELCOW_VID),
-            caption=f"𝐇𝐞𝐥𝐥𝐨: {u.mention} \n 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 {message.chat.title} \n𝐘𝐨𝐮𝐫 𝐈𝐝: {message.from_user.id} \n𝐘𝐨𝐮𝐫 𝐀𝐝𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐍𝐨: {count}",
+            caption=f"𝐇𝐞𝐥𝐥𝐨: [{u.mention}](tg://user?id={message.from_user.id}) {u.mention} \n 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 {message.chat.title} \n𝐘𝐨𝐮𝐫 𝐈𝐝: {message.from_user.id} \n𝐘𝐨𝐮𝐫 𝐀𝐝𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐍𝐨: {count}",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.MARKDOWN
             )

@@ -23,7 +23,7 @@ from plugins import web_server
 
 
 
-class Bot(Client):
+class Lilsa(Client):
 
     def __init__(self):
         super().__init__(
@@ -104,5 +104,5 @@ class Bot(Client):
                 current += 1
 
 
-app = Bot()
+app = Lilsa()
 app.run()

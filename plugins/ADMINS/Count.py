@@ -41,9 +41,9 @@ Bot = Client(
 @Client.on_message(filters.command(["count"]))
 async def count(client, message):
     await message.reply_text(
-        text=f"{random.choice(RUN_STRINGS)}Total 0 Click's{random.choice(RUN_STRINGS)}",
+        text=f"Total 0 Click's",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text=f'{random.choice(RUN_STRINGS)} CLICK HERE {random.choice(RUN_STRINGS)}', callback_data="counts")]]
+            [[InlineKeyboardButton(text=f' CLICK HERE ', callback_data="counts")]]
         ),
     )
 
@@ -70,9 +70,9 @@ async def reset_count(_, update: Message):
 @Client.on_callback_query(filters.regex(r"^counts$"))
 async def callback(_, update: CallbackQuery):
     count = int(update.message.text.split(" ")[1]) + 1
-    text = f"{random.choice(RUN_STRINGS)}Total {count} Click's{random.choice(RUN_STRINGS)}"
+    text = f"{random.choice(RUN_STRINGS)}Total {count} Click's"
     await update.message.edit_text(text=text, reply_markup=update.message.reply_markup)
-    await update.answer(text=f"{random.choice(RUN_STRINGS)} {text} {random.choice(RUN_STRINGS)}", show_alert=True)
+    await update.answer(text=f"{random.choice(RUN_STRINGS)} {text}", show_alert=True)
 
 
 

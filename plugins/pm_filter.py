@@ -2167,7 +2167,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )       
     elif query.data == "MODULES_PLUGINS3":
         buttons = [[
-           InlineKeyboardButton(f𝐁𝐚𝐜𝐤', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)

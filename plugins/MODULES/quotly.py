@@ -259,6 +259,7 @@ def isArgInt(txt) -> list:
 
 @Client.on_message(filters.command(["q", "quotly"]) & filters.reply)
 async def msg_quotly_cmd(self, ctx):
+    msg = message
     await ctx.reply_msg("processing...")
     is_reply = False
     if ctx.command[0].endswith("r"):

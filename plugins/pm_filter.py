@@ -2120,18 +2120,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
         grp_id = query.message.chat.id
         title = query.message.chat.title
         buttons = [[
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton(f'𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [                    
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐇𝐞𝐥𝐩{random.choice(RUN_STRINGS)}', callback_data='help'),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='helps')
+            InlineKeyboardButton(f'𝐇𝐞𝐥𝐩', callback_data='help'),
+            InlineKeyboardButton(f'𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='helps')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐑𝐮𝐥𝐞𝐬{random.choice(RUN_STRINGS)}', url='http://telegra.ph/Minnal-murali-03-06-12'),        
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐀𝐛𝐨𝐮𝐭{random.choice(RUN_STRINGS)}', callback_data='about')          
+            InlineKeyboardButton(f'𝐑𝐮𝐥𝐞𝐬', url='http://telegra.ph/Minnal-murali-03-06-12'),        
+            InlineKeyboardButton(f'𝐀𝐛𝐨𝐮𝐭{random.choice(RUN_STRINGS)}', callback_data='about')          
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩{random.choice(RUN_STRINGS)}', url=SUPPORT_CHAT_LINK)
+            InlineKeyboardButton(f'𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url=SUPPORT_CHAT_LINK)
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐈𝐧𝐥𝐢𝐧𝐞{random.choice(RUN_STRINGS)}', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬{random.choice(RUN_STRINGS)}', callback_data=f"setting")
+            InlineKeyboardButton(f'𝐈𝐧𝐥𝐢𝐧𝐞', switch_inline_query_current_chat=''),
+            InlineKeyboardButton(f'𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬', callback_data=f"setting")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
 #        m=await client.edit_message_media(
@@ -2151,23 +2151,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "helps":
         buttons = [[
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐌𝐨𝐝𝐮𝐥𝐞𝐬 & 𝐏𝐥𝐮𝐠𝐢𝐧𝐬{random.choice(RUN_STRINGS)}', callback_data='MODULES_PLUGINS')
+            InlineKeyboardButton(f'𝐌𝐨𝐝𝐮𝐥𝐞𝐬 & 𝐏𝐥𝐮𝐠𝐢𝐧𝐬', callback_data='MODULES_PLUGINS')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='STICKERS')
+            InlineKeyboardButton(f'𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='STICKERS')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐌𝐞𝐝𝐢𝐚 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='MEDIA')
+            InlineKeyboardButton(f'𝐌𝐞𝐝𝐢𝐚 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='MEDIA')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐆𝐨𝐨𝐠𝐥𝐞 & 𝐂𝐡𝐚𝐭𝐆𝐏𝐓{random.choice(RUN_STRINGS)}', callback_data='CHATGPT')
+           InlineKeyboardButton(f'𝐆𝐨𝐨𝐠𝐥𝐞 & 𝐂𝐡𝐚𝐭𝐆𝐏𝐓', callback_data='CHATGPT')
         ], [
-            InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐅𝐚𝐤𝐞 𝐂𝐂 & 𝐀𝐝𝐫𝐞𝐬𝐬{random.choice(RUN_STRINGS)}', callback_data='FAKECC')
+            InlineKeyboardButton(f'𝐅𝐚𝐤𝐞 𝐂𝐂 & 𝐀𝐝𝐫𝐞𝐬𝐬', callback_data='FAKECC')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐇𝐞𝐫𝐨𝐤𝐮 𝐂𝐮𝐬𝐭𝐚𝐦𝐢𝐳𝐞{random.choice(RUN_STRINGS)}', callback_data='HEROKU')
+           InlineKeyboardButton(f'𝐇𝐞𝐫𝐨𝐤𝐮 𝐂𝐮𝐬𝐭𝐚𝐦𝐢𝐳𝐞', callback_data='HEROKU')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐆𝐢𝐭𝐡𝐮𝐛 𝐂𝐮𝐬𝐭𝐚𝐦𝐢𝐳𝐞{random.choice(RUN_STRINGS)}', callback_data='GITHUB')
+           InlineKeyboardButton(f'𝐆𝐢𝐭𝐡𝐮𝐛 𝐂𝐮𝐬𝐭𝐚𝐦𝐢𝐳𝐞', callback_data='GITHUB')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐄𝐱𝐭𝐫𝐚 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬{random.choice(RUN_STRINGS)}', callback_data='ADMINS_AND_PRIVATE')
+           InlineKeyboardButton(f'𝐄𝐱𝐭𝐫𝐚 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬', callback_data='ADMINS_AND_PRIVATE')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐇𝐨𝐦𝐞{random.choice(RUN_STRINGS)}', callback_data='start')
+           InlineKeyboardButton(f'𝐇𝐨𝐦𝐞', callback_data='start')
         
         ]]
         
@@ -2179,11 +2179,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "MODULES_PLUGINS":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐌𝐎𝐃𝐔𝐋𝐄𝐒 & 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 𝟐{random.choice(RUN_STRINGS)}', callback_data='MODULES_PLUGINS2')
+           InlineKeyboardButton(f'𝐌𝐎𝐃𝐔𝐋𝐄𝐒 & 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 𝟐', callback_data='MODULES_PLUGINS2')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐌𝐎𝐃𝐔𝐋𝐄𝐒 & 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 𝟑{random.choice(RUN_STRINGS)}', callback_data='MODULES_PLUGINS3')
+           InlineKeyboardButton(f'𝐌𝐎𝐃𝐔𝐋𝐄𝐒 & 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 𝟑', callback_data='MODULES_PLUGINS3')
         ], [
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')                
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')                
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
         
@@ -2195,7 +2195,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "MODULES_PLUGINS2":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2207,7 +2207,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )       
     elif query.data == "MODULES_PLUGINS3":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2220,7 +2220,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
        
     elif query.data == "MEDIA":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2233,7 +2233,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
   
     elif query.data == "STICKERS":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2246,7 +2246,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "FAKECC":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2259,7 +2259,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "CHATGPT":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2272,7 +2272,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "GITHUB":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2284,7 +2284,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "HEROKU":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2296,7 +2296,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "ADMINS_AND_PRIVATE":
         buttons = [[
-           InlineKeyboardButton(f'{random.choice(RUN_STRINGS)}𝐁𝐚𝐜𝐤{random.choice(RUN_STRINGS)}', callback_data='helps')
+           InlineKeyboardButton(f'𝐁𝐚𝐜𝐤', callback_data='helps')
         
         ]]    
         reply_markup = InlineKeyboardMarkup(buttons)

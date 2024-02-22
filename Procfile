@@ -8,4 +8,4 @@ web: python3 bot.py
 
 # koyeb
 
-worker: python3 lilsa.py
+# worker: python3 lilsa.py

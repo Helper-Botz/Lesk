@@ -13,7 +13,11 @@ from dotenv import load_dotenv
 import random
 from plugins.helpers.config import *
 from info import *
-from database.utils import temp
+from utils import temp
+from os import getenv
+from os import environ
+
+ACCOUNT = environ.get('ACCOUNT', "")
 
 
 # OKDAA = OPENAI_API RemoveBG_API BOT_NAME ADMINS SUPPORT_CHAT_ID SUPPORT_CHAT_RULES MOVIE_RULES UPDATE_CHANNEL_ID PRINT_ID GRP_LNK LOW_SIZE SUPPORT_CHAT CHANNELS BOT_USERNAME CHANNELS CHAT DATABASE_NAME DATABASE_URI LOG_CHANNEL SUPPORT_CHAT_ID

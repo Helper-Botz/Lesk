@@ -376,7 +376,7 @@ async def advantage_spoll_choker(bot, query):
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 buttons = [[
-                    InlineKeyboardButton("🔁 𝐀𝐝𝐦𝐢𝐧 𝐎𝐧𝐥𝐲 🔁", callback_data=f'show_option#{reporter}')
+                    InlineKeyboardButton("🔁 𝐀𝐝𝐦𝐢𝐧 𝐎𝐧𝐥𝐲 🔁", callback_data="start")
                 ]]
                 reply_markup = InlineKeyboardMarkup(buttons)
                                              
@@ -393,14 +393,14 @@ async def advantage_spoll_choker(bot, query):
                 info = await bot.get_users(user_ids=query.message.from_user.id)
                 reference_id = int(query.message.chat.id)
                 buttons = [[
-                    InlineKeyboardButton(f"🔁{conten}🔁", url = k.link)
+                    InlineKeyboardButton(f"🔁{conten}🔁", callback_data='close_data')
                 ],[
                     InlineKeyboardButton("📢 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 📢", callback_data='close_data')
                 ]]
                 reply_markup = InlineKeyboardMarkup(buttons)
                 m = await bot.send_photo(
                     photo=imdb.get('poster'),
-                    chat_id=ADMIN,
+                    chat_id=LOG_CHANNEL,
                     caption=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)),
                     reply_markup=reply_markup,
                     parse_mode=enums.ParseMode.HTML
@@ -1070,29 +1070,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         )
                     )
 #                    return 
-                    name_format = f"okda"
-                    image = await Joel_tgx.download(file_name=f"{name_format}.jpg")
                     
-                    im = Image.open(image).convert("RGB")
-                    im.save(f"{name_format}.webp", "webp")
-                    sticker = f"{name_format}.webp"
-                    buttons = [[
-                     #   InlineKeyboardButton(f"📥{imdb.get('title')} {imdb.get('year')}📥", url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
-                        InlineKeyboardButton(f"📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 📥", url= s.link)
-                    
-                    ], [
-                        InlineKeyboardButton(f"⚠️𝐃𝐞𝐥𝐞𝐭𝐞 𝐍𝐨𝐰⚠️", callback_data="dl")
-                
-                    ]]
-                    reply_markup = InlineKeyboardMarkup(buttons)
-           
-                    sp = await client.send_sticker(
-                    chat_id=AUTH_CHANNEL,
-                    sticker=sticker,            
-                    reply_markup=reply_markup,                       
-                    )
-                    os.remove(sticker)
-                    os.remove(image)
 #                   await asyncio.sleep(300)
 #                   await sp.delete()                                                                                   
                     
